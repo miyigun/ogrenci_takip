@@ -5,5 +5,5 @@ and in transactions for students.
 
 ## Getting Started
 
-<font color=red> In the first stage, the program will record in the mobile phone's own memory, 
+<font face="verdana"> In the first stage, the program will record in the mobile phone's own memory, 
 and in the next stage, <b>the information will be updated</b> via a remote server.</font>
