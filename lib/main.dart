@@ -57,16 +57,28 @@ class _MyHomePageState extends State<MyHomePage> {
                 mainAxisAlignment : MainAxisAlignment.center,
                 crossAxisAlignment : CrossAxisAlignment.start,
                 children: <Widget>[
-                  Text(
-                    "Sınıf Ekle",
-                    style: Theme.of(context).textTheme.headline4,
+                  Row(
+                    children: [
+                      Icon(Icons.add),
+                      SizedBox(width: 10.0),
+                      Text(
+                        "Sınıf Ekle",
+                        style: Theme.of(context).textTheme.headline5,
+                      ),
+                    ]
                   ),
                   SizedBox(
                     height: 10.0
                   ),
-                  Text(
-                    "Öğrenci Ekle",
-                    style: Theme.of(context).textTheme.headline4,
+                  Row(
+                      children: [
+                        Icon(Icons.add),
+                        SizedBox(width: 10.0),
+                        Text(
+                          "Öğrenci Ekle",
+                          style: Theme.of(context).textTheme.headline5,
+                        ),
+                      ]
                   ),
                 ]
             ),
@@ -80,11 +92,11 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: yeniListe,
-        tooltip: 'Yeni Liste',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      // floatingActionButton: FloatingActionButton(
+      //   onPressed: yeniListe,
+      //   tooltip: 'Yeni Liste',
+      //   child: const Icon(Icons.add),
+      // ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 
