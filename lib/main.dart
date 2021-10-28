@@ -40,41 +40,47 @@ class _MyHomePageState extends State<MyHomePage> {
         mainAxisAlignment: MainAxisAlignment.start,
         children: <Widget>[
           Container(
+            width: 500.0,
+            //color: Colors.transparent,
             decoration: const BoxDecoration(
               image: DecorationImage(
                 image: AssetImage("images/book.jpg"),
-                fit: BoxFit.cover,
+                fit: BoxFit.fill,
               ),
             ),
-            child: Column(
-                mainAxisAlignment : MainAxisAlignment.center,
-                crossAxisAlignment : CrossAxisAlignment.start,
-                children: <Widget>[
-                  Row(
-                      children: [
-                        const Icon(Icons.add),
-                        const SizedBox(width: 10.0),
-                        Text(
-                          "Sınıf Ekle",
-                          style: Theme.of(context).textTheme.headline5,
-                        ),
-                      ]
-                  ),
-                  const SizedBox(
-                      height: 10.0
-                  ),
-                  Row(
-                      children: [
-                        const Icon(Icons.add),
-                        const SizedBox(width: 10.0),
-                        Text(
-                          "Öğrenci Ekle",
-                          style: Theme.of(context).textTheme.headline5,
-                        ),
-                      ]
-                  ),
-                ]
-            ), /* add child content here */
+            child: null /* add child content here */
+          ),
+          Column(
+              mainAxisAlignment : MainAxisAlignment.center,
+              crossAxisAlignment : CrossAxisAlignment.start,
+              children: <Widget>[
+                Row(
+                    children: [
+                      const Icon(Icons.add),
+                      const SizedBox(width: 10.0),
+                      TextButton(
+                        child: Text(
+                        "Sınıf Ekle",
+                        style: Theme.of(context).textTheme.headline5,
+                      ),
+                          onPressed: sinifEkle(),
+                      ),
+                    ],
+                ),
+                const SizedBox(
+                    height: 10.0
+                ),
+                Row(
+                    children: [
+                      const Icon(Icons.add),
+                      const SizedBox(width: 10.0),
+                      Text(
+                        "Öğrenci Ekle",
+                        style: Theme.of(context).textTheme.headline5,
+                      ),
+                    ]
+                ),
+              ]
           ),
 
           // const Padding(
@@ -103,6 +109,10 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   void yeniListe() {
+
+  }
+
+  sinifEkle() {
 
   }
 }
