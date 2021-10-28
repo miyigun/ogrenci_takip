@@ -29,51 +29,44 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: const Color.fromRGBO(8, 219, 208, 0.86),
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Center(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-
-            // Image.asset(
-            //   "images/book.jpg",
-            //   width: 300,
-            //   height: 400,
-            // ),
-            Padding(
-                padding: const EdgeInsets.all(20.0),
-                child: CircleAvatar(
-                  radius: 100,
-                  backgroundImage: AssetImage("images/book.jpg",),
-                )
+      body: Row(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: <Widget>[
+          Container(
+            decoration: const BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage("images/book.jpg"),
+                fit: BoxFit.cover,
+              ),
             ),
-            Column(
+            child: Column(
                 mainAxisAlignment : MainAxisAlignment.center,
                 crossAxisAlignment : CrossAxisAlignment.start,
                 children: <Widget>[
                   Row(
-                    children: [
-                      Icon(Icons.add),
-                      SizedBox(width: 10.0),
-                      Text(
-                        "Sınıf Ekle",
-                        style: Theme.of(context).textTheme.headline5,
-                      ),
-                    ]
+                      children: [
+                        const Icon(Icons.add),
+                        const SizedBox(width: 10.0),
+                        Text(
+                          "Sınıf Ekle",
+                          style: Theme.of(context).textTheme.headline5,
+                        ),
+                      ]
                   ),
-                  SizedBox(
-                    height: 10.0
+                  const SizedBox(
+                      height: 10.0
                   ),
                   Row(
                       children: [
-                        Icon(Icons.add),
-                        SizedBox(width: 10.0),
+                        const Icon(Icons.add),
+                        const SizedBox(width: 10.0),
                         Text(
                           "Öğrenci Ekle",
                           style: Theme.of(context).textTheme.headline5,
@@ -81,16 +74,25 @@ class _MyHomePageState extends State<MyHomePage> {
                       ]
                   ),
                 ]
-            ),
-            // Container(
-            //   width: 100.0,
-            //   height: 100.0,
-            //   decoration: Decoration(
-            //
-            //   )
+            ), /* add child content here */
+          ),
 
-          ],
-        ),
+          // const Padding(
+          //     padding: EdgeInsets.only(top:20.0,left:20.0),
+          //     child: CircleAvatar(
+          //       radius: 100,
+          //       backgroundImage: AssetImage("images/book.jpg",),
+          //     )
+          // ),
+
+          // Container(
+          //   width: 100.0,
+          //   height: 100.0,
+          //   decoration: Decoration(
+          //
+          //   )
+
+        ],
       ),
       // floatingActionButton: FloatingActionButton(
       //   onPressed: yeniListe,
