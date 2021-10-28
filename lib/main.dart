@@ -74,9 +74,12 @@ class _MyHomePageState extends State<MyHomePage> {
                     children: [
                       const Icon(Icons.add),
                       const SizedBox(width: 10.0),
-                      Text(
-                        "Öğrenci Ekle",
-                        style: Theme.of(context).textTheme.headline5,
+                      TextButton(
+                        child: Text(
+                          "Öğrenci Ekle",
+                          style: Theme.of(context).textTheme.headline5,
+                        ),
+                        onPressed: ogrenciEkle(),
                       ),
                     ]
                 ),
@@ -115,4 +118,6 @@ class _MyHomePageState extends State<MyHomePage> {
   sinifEkle() {
 
   }
+
+  ogrenciEkle() {}
 }
