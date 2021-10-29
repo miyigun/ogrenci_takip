@@ -32,77 +32,38 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: const Color.fromRGBO(8, 219, 208, 0.86),
+        //backgroundColor: const Color.fromRGBO(8, 219, 208, 0.86),
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Row(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: <Widget>[
-          Container(
-            width: 500.0,
-            //color: Colors.transparent,
-            decoration: const BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage("images/book.jpg"),
-                fit: BoxFit.fill,
+      body: Padding(
+        padding: EdgeInsets.only(left: 50.0),
+        child: Column(
+            mainAxisAlignment : MainAxisAlignment.center,
+            crossAxisAlignment : CrossAxisAlignment.start,
+            children: <Widget>[
+              TextButton(
+                  onPressed: dersProgramim,
+                  child: const Text("Ders Programım", style: TextStyle(fontSize: 24.0))
               ),
-            ),
-            child: null /* add child content here */
-          ),
-          Column(
-              mainAxisAlignment : MainAxisAlignment.center,
-              crossAxisAlignment : CrossAxisAlignment.start,
-              children: <Widget>[
-                Row(
-                    children: [
-                      const Icon(Icons.add),
-                      const SizedBox(width: 10.0),
-                      TextButton(
-                        child: Text(
-                        "Sınıf Ekle",
-                        style: Theme.of(context).textTheme.headline5,
-                      ),
-                          onPressed: sinifEkle(),
-                      ),
-                    ],
-                ),
-                const SizedBox(
-                    height: 10.0
-                ),
-                Row(
-                    children: [
-                      const Icon(Icons.add),
-                      const SizedBox(width: 10.0),
-                      TextButton(
-                        child: Text(
-                          "Öğrenci Ekle",
-                          style: Theme.of(context).textTheme.headline5,
-                        ),
-                        onPressed: ogrenciEkle(),
-                      ),
-                    ]
-                ),
-              ]
-          ),
-
-          // const Padding(
-          //     padding: EdgeInsets.only(top:20.0,left:20.0),
-          //     child: CircleAvatar(
-          //       radius: 100,
-          //       backgroundImage: AssetImage("images/book.jpg",),
-          //     )
-          // ),
-
-          // Container(
-          //   width: 100.0,
-          //   height: 100.0,
-          //   decoration: Decoration(
-          //
-          //   )
-
-        ],
+              const SizedBox(
+                  height: 10.0
+              ),
+              TextButton(
+                  onPressed: siniflarim,
+                  child: const Text("Sınıflarım", style: TextStyle(fontSize: 24.0))
+              ),
+              const SizedBox(
+                  height: 10.0
+              ),
+              TextButton(
+                  onPressed: yillikPlanlarim,
+                  child: const Text("Yıllık Planlarım", style: TextStyle(fontSize: 24.0))
+              ),
+            ]
+        ),
       ),
+
       // floatingActionButton: FloatingActionButton(
       //   onPressed: yeniListe,
       //   tooltip: 'Yeni Liste',
@@ -111,13 +72,12 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
-  void yeniListe() {
-
+  void dersProgramim() {
   }
 
-  sinifEkle() {
-
+  void siniflarim() {
   }
 
-  ogrenciEkle() {}
+  void yillikPlanlarim() {
+  }
 }
