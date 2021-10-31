@@ -32,7 +32,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromRGBO(211, 201, 8, 0.86),
+      backgroundColor: const Color.fromRGBO(255, 170, 170, 0.86),
       appBar: AppBar(
         title: Text(widget.title),
       ),
@@ -59,6 +59,31 @@ class _MyHomePageState extends State<MyHomePage> {
               TextButton(
                   onPressed: yillikPlanlarim,
                   child: const Text("Yıllık Planlarım", style: TextStyle(fontSize: 24.0))
+              ),
+              SizedBox(
+                height: 50.0,
+              ),
+              Row(
+                children: [
+                  IconButton(
+                      icon: Icon(Icons.facebook),
+                      iconSize: 36.0,
+                      onPressed: (){
+                      }
+                  ),
+                  IconButton(
+                      icon: Icon(Icons.mail),
+                      iconSize: 36.0,
+                      onPressed: (){
+                      }
+                  ),
+                  IconButton(
+                      icon: Icon(Icons.add_a_photo),
+                      iconSize: 36.0,
+                      onPressed: (){
+                      }
+                  ),
+                ]
               ),
             ]
         ),
